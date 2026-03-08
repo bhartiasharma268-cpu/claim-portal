@@ -30,3 +30,66 @@
 <ul id="claimList"></ul>
 
 <ul id="claimList"></ul>
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Claim Portal</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="navbar">
+
+<h2>Claim Portal</h2>
+
+<ul>
+
+<li onclick="showPage('home')">Home</li>
+<li onclick="showPage('claims')">Claims</li>
+<li onclick="showPage('about')">About</li>
+
+</ul>
+
+</div>
+
+
+<div id="home" class="page">
+
+<h1>Welcome Bharti</h1>
+<p>This is your Claim Management Portal.</p>
+
+</div>
+
+
+<div id="claims" class="page" style="display:none;">
+
+<h2>Add New Claim</h2>
+
+<input type="text" id="claim" placeholder="Enter claim name">
+
+<button onclick="addClaim()">Submit</button>
+
+<ul id="claimList"></ul>
+
+</div>
+
+
+<div id="about" class="page" style="display:none;">
+
+<h2>About</h2>
+
+<p>This portal is built using HTML, CSS and JavaScript.</p>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
