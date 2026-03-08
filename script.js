@@ -3,7 +3,7 @@ function addClaim(){
 var claim=document.getElementById("claim").value;
 
 if(claim==""){
-alert("Enter claim");
+alert("Enter claim name");
 return;
 }
 
@@ -11,19 +11,11 @@ var list=document.getElementById("claimList");
 
 var li=document.createElement("li");
 
-li.innerHTML=claim+" <button onclick='deleteClaim(this)'>Delete</button>";
+li.innerHTML=claim;
 
 list.appendChild(li);
 
 document.getElementById("claim").value="";
-
-updateTotal();
-
-}
-
-function deleteClaim(btn){
-
-btn.parentElement.remove();
 
 updateTotal();
 
