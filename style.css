@@ -6,9 +6,9 @@ color:white;
 }
 
 .sidebar{
-width:200px;
+width:220px;
 height:100vh;
-background:#111a2e;
+background:#121b33;
 position:fixed;
 padding:20px;
 }
@@ -20,27 +20,35 @@ padding:0;
 
 .sidebar li{
 padding:10px 0;
+cursor:pointer;
 }
 
 .main{
-margin-left:220px;
-padding:20px;
+margin-left:240px;
+padding:30px;
 }
 
 .cards{
 display:grid;
 grid-template-columns:repeat(4,1fr);
 gap:20px;
+margin-bottom:40px;
 }
 
 .card{
-background:#16223b;
+background:#182447;
 padding:20px;
-border-radius:10px;
+border-radius:12px;
 text-align:center;
 }
 
 .card p{
-font-size:24px;
-color:#2ecc71;
+font-size:26px;
+color:#00ffa6;
+}
+
+canvas{
+background:#182447;
+padding:20px;
+border-radius:12px;
 }
