@@ -2,13 +2,19 @@
 <html>
 <head>
 <title>Dashboard</title>
+
 <link rel="stylesheet" href="style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 </head>
 
 <body>
 
 <div class="sidebar">
+
 <h2>Portal</h2>
+
 <ul>
 <li>Dashboard</li>
 <li>Journal</li>
@@ -17,6 +23,7 @@
 <li>Learn</li>
 <li>Community</li>
 </ul>
+
 </div>
 
 <div class="main">
@@ -27,27 +34,33 @@
 
 <div class="card">
 <h3>Net P&L</h3>
-<p>$36,433.16</p>
-</div>
-
-<div class="card">
-<h3>Average R:R</h3>
-<p>1.49</p>
+<p id="pnl">$0</p>
 </div>
 
 <div class="card">
 <h3>Win Rate</h3>
-<p>58.55%</p>
+<p id="winrate">0%</p>
 </div>
 
 <div class="card">
 <h3>Profit Factor</h3>
-<p>2.11</p>
+<p id="profitfactor">0</p>
+</div>
+
+<div class="card">
+<h3>Average R:R</h3>
+<p id="rr">0</p>
 </div>
 
 </div>
 
+<h2>Weekly Trade Distribution</h2>
+
+<canvas id="tradeChart"></canvas>
+
 </div>
+
+<script src="script.js"></script>
 
 </body>
 </html>
