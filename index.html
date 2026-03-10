@@ -3,7 +3,9 @@
 
 <head>
 
-<title>Analytics Portal Login</title>
+<title>Sales Dashboard</title>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <link rel="stylesheet" href="style.css">
 
@@ -11,19 +13,13 @@
 
 <body>
 
-<div class="login-box">
+<h1>Sales Analytics Dashboard</h1>
 
-<h2>Analytics Portal</h2>
+<button onclick="darkMode()">Dark Mode</button>
 
-<input type="text" id="username" placeholder="Username">
+<canvas id="salesChart"></canvas>
 
-<input type="password" id="password" placeholder="Password">
-
-<button onclick="login()">Login</button>
-
-</div>
-
-<script src="login.js"></script>
+<script src="script.js"></script>
 
 </body>
 
