@@ -3,9 +3,7 @@
 
 <head>
 
-<title>Sales Analytics Dashboard</title>
-
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<title>Analytics Portal Login</title>
 
 <link rel="stylesheet" href="style.css">
 
@@ -13,69 +11,21 @@
 
 <body>
 
-<h1>Samsung vs Vivo Sales Dashboard</h1>
+<div class="login-box">
 
-<!-- FILTER -->
-<div class="filter">
+<h2>Analytics Portal</h2>
 
-<label>Select Company:</label>
+<input type="text" id="username" placeholder="Username">
 
-<select id="companyFilter" onchange="updateDashboard()">
+<input type="password" id="password" placeholder="Password">
 
-<option value="All">All</option>
-<option value="Samsung">Samsung</option>
-<option value="Vivo">Vivo</option>
-
-</select>
+<button onclick="login()">Login</button>
 
 </div>
 
-
-<!-- KPI CARDS -->
-
-<div class="kpi-container">
-
-<div class="kpi">
-<h3>Total Revenue</h3>
-<p id="revenueKPI">85B</p>
-</div>
-
-<div class="kpi">
-<h3>Total Profit</h3>
-<p id="profitKPI">23B</p>
-</div>
-
-<div class="kpi">
-<h3>Units Sold</h3>
-<p id="unitsKPI">520</p>
-</div>
-
-<div class="kpi">
-<h3>Avg Rating</h3>
-<p id="ratingKPI">4.3</p>
-</div>
-
-</div>
-
-
-<div class="dashboard">
-
-<div class="card">
-<canvas id="profitChart"></canvas>
-</div>
-
-<div class="card">
-<canvas id="revenueChart"></canvas>
-</div>
-
-<div class="card full">
-<canvas id="productChart"></canvas>
-</div>
-
-</div>
-
-<script src="script.js"></script>
+<script src="login.js"></script>
 
 </body>
+
 </html>
 
