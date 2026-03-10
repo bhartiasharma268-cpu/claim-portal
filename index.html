@@ -1,62 +1,45 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>Dashboard</title>
 
-<link rel="stylesheet" href="style.css">
+<head>
+<title>Samsung vs Vivo Dashboard</title>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 
-<div class="sidebar">
+<h1>Samsung vs Vivo Sales Dashboard</h1>
 
-<h2>Portal</h2>
-
-<ul>
-<li>Dashboard</li>
-<li>Journal</li>
-<li>Backtest</li>
-<li>Copier</li>
-<li>Learn</li>
-<li>Community</li>
-</ul>
-
-</div>
-
-<div class="main">
-
-<h1>Dashboard</h1>
-
-<div class="cards">
+<div class="dashboard">
 
 <div class="card">
-<h3>Net P&L</h3>
-<p id="pnl">$0</p>
+<h3>Units Sold by Purchase Reason</h3>
+<canvas id="reasonChart"></canvas>
 </div>
 
 <div class="card">
-<h3>Win Rate</h3>
-<p id="winrate">0%</p>
+<h3>Profit by Company</h3>
+<canvas id="profitChart"></canvas>
 </div>
 
 <div class="card">
-<h3>Profit Factor</h3>
-<p id="profitfactor">0</p>
+<h3>Customer Rating by Product</h3>
+<canvas id="ratingChart"></canvas>
 </div>
 
 <div class="card">
-<h3>Average R:R</h3>
-<p id="rr">0</p>
+<h3>Revenue by Company</h3>
+<canvas id="revenueChart"></canvas>
 </div>
 
+<div class="card full">
+<h3>Units Sold by Product</h3>
+<canvas id="productChart"></canvas>
 </div>
-
-<h2>Weekly Trade Distribution</h2>
-
-<canvas id="tradeChart"></canvas>
 
 </div>
 
@@ -64,5 +47,4 @@
 
 </body>
 </html>
-
 
