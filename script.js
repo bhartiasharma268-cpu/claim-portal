@@ -1,69 +1,88 @@
-// Purchase Reason Chart
-new Chart(document.getElementById("reasonChart"),{
-type:"bar",
-data:{
-labels:["Gaming","Camera","Premium Design","Battery","Value"],
-datasets:[
-{
-label:"Samsung",
-data:[40,35,30,25,20],
-backgroundColor:"gold"
-},
-{
-label:"Vivo",
-data:[50,45,40,35,30],
-backgroundColor:"blue"
-}
-]
-}
-});
+let revenueChart;
+let profitChart;
+let productChart;
 
-// Profit Pie Chart
-new Chart(document.getElementById("profitChart"),{
+function createCharts(){
+
+profitChart = new Chart(document.getElementById("profitChart"),{
+
 type:"pie",
+
 data:{
 labels:["Samsung","Vivo"],
 datasets:[{
 data:[15,8],
-backgroundColor:["gold","blue"]
+backgroundColor:["#caa400","#4b4bff"]
 }]
 }
+
 });
 
-// Rating Chart
-new Chart(document.getElementById("ratingChart"),{
-type:"bar",
-data:{
-labels:["Vivo X","Vivo T","Galaxy S","Galaxy Fold","Vivo Y"],
-datasets:[{
-label:"Customer Rating",
-data:[85,80,78,76,70],
-backgroundColor:"purple"
-}]
-}
-});
 
-// Revenue Donut Chart
-new Chart(document.getElementById("revenueChart"),{
+revenueChart = new Chart(document.getElementById("revenueChart"),{
+
 type:"doughnut",
+
 data:{
 labels:["Samsung","Vivo"],
 datasets:[{
 data:[55,30],
-backgroundColor:["gold","blue"]
+backgroundColor:["#caa400","#4b4bff"]
 }]
 }
+
 });
 
-// Product Sales Chart
-new Chart(document.getElementById("productChart"),{
+
+productChart = new Chart(document.getElementById("productChart"),{
+
 type:"bar",
+
 data:{
 labels:["Vivo X","Vivo T","Galaxy S","Galaxy Fold","Vivo Y","Galaxy M"],
 datasets:[{
 label:"Units Sold",
 data:[85,80,78,75,70,68],
-backgroundColor:"blue"
+backgroundColor:"#4b4bff"
 }]
 }
+
 });
+
+}
+
+createCharts();
+
+
+function updateDashboard(){
+
+let company = document.getElementById("companyFilter").value;
+
+if(company=="Samsung"){
+
+document.getElementById("revenueKPI").innerText="55B";
+document.getElementById("profitKPI").innerText="15B";
+document.getElementById("unitsKPI").innerText="280";
+document.getElementById("ratingKPI").innerText="4.2";
+
+}
+
+else if(company=="Vivo"){
+
+document.getElementById("revenueKPI").innerText="30B";
+document.getElementById("profitKPI").innerText="8B";
+document.getElementById("unitsKPI").innerText="240";
+document.getElementById("ratingKPI").innerText="4.4";
+
+}
+
+else{
+
+document.getElementById("revenueKPI").innerText="85B";
+document.getElementById("profitKPI").innerText="23B";
+document.getElementById("unitsKPI").innerText="520";
+document.getElementById("ratingKPI").innerText="4.3";
+
+}
+
+}
