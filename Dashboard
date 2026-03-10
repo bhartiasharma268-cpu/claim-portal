@@ -17,13 +17,7 @@
 
 <button onclick="darkMode()">Dark Mode</button>
 
-<input type="file" id="fileUpload">
-
-<div class="dashboard">
-
 <canvas id="salesChart"></canvas>
-
-</div>
 
 <script src="script.js"></script>
 
